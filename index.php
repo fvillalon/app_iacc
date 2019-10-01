@@ -39,7 +39,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Bienvenido a APP IACC</h1>
                   </div>
-                  <form class="user" action="view/_login.php" method="POST">
+                  <form class="user" action="sesion/_login.php" method="POST">
                     <div class="form-group">
                       <input type="text" name="user_run"  class="form-control form-control-user" id="inputRun"  required placeholder="Run: 123456789-K">
                     </div>
@@ -138,7 +138,7 @@
             $("#PHP_RESPONSE").html(data);
             if(RESPUESTA == true)
             {
-              location.href="dashboard.php";
+              location.href="view/dashboard.php";
             }else
             {
               alert ("Usuario y/o contraseña no validos.");

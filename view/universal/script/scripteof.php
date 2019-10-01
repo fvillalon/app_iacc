@@ -4,7 +4,8 @@
 </a>
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -16,7 +17,7 @@
             <div class="modal-body">Esta accion terminara su sesion actual.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                <a class="btn btn-primary" href="logout.php">Salir</a>
+                <a class="btn btn-primary" href="../../../sesion/logout.php">Salir</a>
             </div>
         </div>
     </div>
@@ -24,7 +25,8 @@
 
 
 <!-- HELP Modal-->
-<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="helpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -42,20 +44,17 @@
 </div>
 
 
-
-
-
 <!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/<?php echo $GLOBALS["APP_NAME"] ?>/vendor/jquery/jquery.min.js"></script>
+<script src="/<?php echo $GLOBALS["APP_NAME"] ?>/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="/<?php echo $GLOBALS["APP_NAME"] ?>/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
+<script src="/<?php echo $GLOBALS["APP_NAME"] ?>/js/sb-admin-2.min.js"></script>
 <!-- Valida RUN-->
-<script src="js/jquery.rut.min.js"></script>
+<script src="/<?php echo $GLOBALS["APP_NAME"] ?>/js/jquery.rut.min.js"></script>
 
 <script>
 

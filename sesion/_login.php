@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("config.php");
+require_once ("../config/config.db.php");
 
 $user_run = $_POST['user_run'];
 $user_pass = md5($_POST['user_pass']); // encriptada
@@ -38,7 +38,7 @@ $sql = "SELECT ID_registro FROM bitacora WHERE ID_usuario = '$ID_usuario' AND fe
 $result2 = $enlace->query($sql);
 
 while ($fila = $result2->fetch_assoc()) {
-    echo $_SESSION[$GLOBALS["APP_NAME"] . "_ID_bitacora"] = $fila["ID_registro"];
+    $_SESSION[$GLOBALS["APP_NAME"] . "_ID_bitacora"] = $fila["ID_registro"];
 }
 
 if ($ID_usuario && $result1) {

@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("config.php");
+require_once ("config.db.php");
 
 $fecha_bitacora = date("Y-m-d H:i:s");
 $id_bitacora = $_SESSION[$GLOBALS["APP_NAME"] . "_ID_bitacora"];
@@ -13,6 +13,6 @@ $result1 = $enlace->query($sql);
 
 mysqli_close($enlace);
 
-header("Location: login.html");
+header("Location: ../index.php");
 
 ?>

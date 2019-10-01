@@ -16,7 +16,7 @@
     </div>
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="nuevo_usuario_list.php">
+        <a class="nav-link" href="/<?php echo $GLOBALS["APP_NAME"] ?>/view/mantenedor/usuario/nuevo_usuario_list.php">
             <i class="fas fa-fw fa-user"></i>
             <span>Listado Usuarios</span></a>
     </li>
@@ -33,7 +33,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="dashboard.php">
+        <a class="nav-link" href="/<?php echo $GLOBALS["APP_NAME"] ?>/view/dashboard.php">
             <i class="fas fa-fw fa-calendar-alt"></i>
             <span>Planificacion Anual</span></a>
     </li>

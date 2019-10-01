@@ -3865,7 +3865,7 @@ core_defaults._set('bar', {
 });
 
 /**
- * Computes the "optimal" sample size to maintain bars equally sized while preventing overlap.
+ * Computes the "optimal" sample size to maintain bar equally sized while preventing overlap.
  * @private
  */
 function computeMinSampleSize(scale, pixels) {
@@ -3889,7 +3889,7 @@ function computeMinSampleSize(scale, pixels) {
 /**
  * Computes an "ideal" category based on the absolute bar thickness or, if undefined or null,
  * uses the smallest interval (see computeMinSampleSize) that prevents bar overlapping. This
- * mode currently always generates bars equally sized (until we introduce scriptable options?).
+ * mode currently always generates bar equally sized (until we introduce scriptable options?).
  * @private
  */
 function computeFitCategoryTraits(index, ruler, options) {
@@ -3917,9 +3917,9 @@ function computeFitCategoryTraits(index, ruler, options) {
 }
 
 /**
- * Computes an "optimal" category that globally arranges bars side by side (no gap when
+ * Computes an "optimal" category that globally arranges bar side by side (no gap when
  * percentage options are 1), based on the previous and following categories. This mode
- * generates bars with different widths when data are not evenly spaced.
+ * generates bar with different widths when data are not evenly spaced.
  * @private
  */
 function computeFlexCategoryTraits(index, ruler, options) {

@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require_once("config.php");
+require_once ("config/config.db.php");
 
 if(!isset($_SESSION[$GLOBALS["APP_NAME"]."_run"]))
 {

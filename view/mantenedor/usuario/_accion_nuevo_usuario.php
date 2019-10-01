@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require_once("config.php");
-require_once("funciones.php");
+require_once ("config.db.php");
+require_once ("funciones.php");
 
 if (!isset($_SESSION[$GLOBALS["APP_NAME"] . "_run"])) {
     echo "<script>location.href = 'login.html';</script>";

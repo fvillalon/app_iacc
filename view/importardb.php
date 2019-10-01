@@ -1,3 +1,9 @@
+<?php
+session_start();
+require_once ("config/config.db.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -12,12 +18,12 @@
     <title>LOGIN</title>
 
     <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
           rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.min.css" rel="stylesheet">
 
 </head>
 
@@ -64,17 +70,17 @@
 </div>
 <div id="PHP_RESPONSE" style="display:none;"></div>
 <!-- Bootstrap core JavaScript-->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <!-- Core plugin JavaScript-->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script src="../vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <!-- Custom scripts for all pages-->
-<script src="js/sb-admin-2.min.js"></script>
+<script src="../js/sb-admin-2.min.js"></script>
 
 <!-- Valida RUN-->
-<script src="js/jquery.rut.min.js"></script>
+<script src="../js/jquery.rut.min.js"></script>
 <script>
 
     $(document).ready(function(){
@@ -122,13 +128,13 @@ if (isset($_POST["CONFIRMAR"]) && $_POST["CLAVE"] == "CONFIRMAR") {
 // Name of the file
     $filename = 'bd/ini-app_iacc.sql';
 // MySQL host
-    $mysql_host = 'localhost';
+    $mysql_host = $GLOBALS["IP"];
 // MySQL username
-    $mysql_username = 'root';
+    $mysql_username = $GLOBALS["DB_USER"];
 // MySQL password
-    $mysql_password = 'Dany2008@';
+    $mysql_password = $GLOBALS["DB_PASS"];
 // Database name
-    $mysql_database = 'app_iacc';
+    $mysql_database = $GLOBALS["DB_NAME"];
 
 // Connect to MySQL server
     $con = @new mysqli($mysql_host, $mysql_username, $mysql_password);

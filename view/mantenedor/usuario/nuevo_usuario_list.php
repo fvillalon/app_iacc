@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 
 <?php
-require_once ("sesion.php");
-require_once ("scripthead.php");
+
+require_once ("../../../sesion/sesion.php"); // DEBE SER RELATIVO
+require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/script/scripthead.php");
 ?>
 
 <body id="page-top">
@@ -11,7 +12,7 @@ require_once ("scripthead.php");
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <?php require_once ("bsidebar.php")?>
+    <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/bar/bsidebar.php") ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -21,7 +22,7 @@ require_once ("scripthead.php");
         <div id="content">
 
             <!-- Topbar -->
-            <?php require_once ("bartop.php")?>
+            <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/bar/bartop.php") ?>
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
@@ -97,7 +98,7 @@ require_once ("scripthead.php");
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <?php require_once ("barfooter.php")?>
+        <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/bar/barfooter.php") ?>
         <!-- End of Footer -->
 
     </div>
@@ -106,7 +107,7 @@ require_once ("scripthead.php");
 </div>
 <!-- End of Page Wrapper -->
 
-<?php require_once ("scripteof.php")?>
+<?php require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/script/scripteof.php") ?>
 
 </body>
 
