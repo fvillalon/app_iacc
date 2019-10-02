@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 
 <?php
-require_once ("../../../sesion.php");
-require_once ("scripthead.php") ?>
+require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/sesion/sesion.php");
+require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/script/scripthead.php") ?>
 
 <body id="page-top">
 
@@ -10,7 +10,7 @@ require_once ("scripthead.php") ?>
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <?php require_once ("bsidebar.php") ?>
+    <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/bar/bsidebar.php") ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -20,7 +20,7 @@ require_once ("scripthead.php") ?>
         <div id="content">
 
             <!-- Topbar -->
-            <?php require_once ("bartop.php") ?>
+            <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/bar/bartop.php") ?>
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
@@ -28,9 +28,7 @@ require_once ("scripthead.php") ?>
 
                 <!-- Page Heading -->
                 <h1 class="h3 mb-4 text-gray-800">NUEVO USUARIO</h1>
-                <div class="row">
-                    <?php require_once ("alerta.html")?>
-                </div>
+
 
                 <div class="row">
 
@@ -42,7 +40,9 @@ require_once ("scripthead.php") ?>
                                 <table class="table table-bordered">
                                     <tr>
                                         <td>RUN</td>
-                                        <td><input id="inputRun" name="RUN" class="form-control form-control-user" /></td>
+                                        <td><input id="inputRun" name="RUN" class="form-control form-control-user" />
+                                        <br><span style="display: none;" id="rutResponse"></span>
+                                        </td>
                                     </tr>
                                     <tr>
                                         <td>Nombre</td>
@@ -125,7 +125,7 @@ require_once ("scripthead.php") ?>
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <?php require_once ("barfooter.php") ?>
+        <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/bar/barfooter.php") ?>
         <!-- End of Footer -->
 
     </div>
@@ -134,7 +134,7 @@ require_once ("scripthead.php") ?>
 </div>
 <!-- End of Page Wrapper -->
 
-<?php require_once ("scripteof.php") ?>
+<?php require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/script/scripteof.php") ?>
 <script type="text/javascript">
     jQuery(document).ready(function ($) {
         $("form input#inputRun")
@@ -146,6 +146,29 @@ require_once ("scripthead.php") ?>
                 $(this).removeClass("text-danger");
 
             });
+
+
+        $(document).on("keyup","#inputRun",function(e){
+            e.preventDefault(); // avoid to execute the actual submit of the form.
+
+            $("#rutResponse").html("");
+            $.ajax({
+                type: "POST",
+                url: "_accion_nuevo_usuario.php",
+                data: { ACCION : "CONSULTA_RUN" , RUN : $(this).val()},
+                success: function (data) {
+
+                    $("#PHP_RESPONSE").html(data);
+                    if (RESPUESTA == true) {
+                        $("#rutResponse").html(MENSAJE);
+                    } else {
+                        $("#rutResponse").html(MENSAJE);
+                    }
+
+                }
+
+        });
+
 
         $("form").submit(function (e) {
             $("#GLOBAL_ALERTA_DIV").hide('slide');
@@ -177,6 +200,7 @@ require_once ("scripthead.php") ?>
 
                 }
             });
+            $("html, body").animate({ scrollTop: 0 }, "slow");
 
 
         });

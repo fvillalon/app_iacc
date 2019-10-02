@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 
 <?php
-
-require_once ("../../../sesion/sesion.php"); // DEBE SER RELATIVO
-require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/script/scripthead.php");
+require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/sesion/sesion.php"); // DEBE SER RELATIVO
+require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/script/scripthead.php");
 ?>
 
 <body id="page-top">
@@ -12,7 +11,7 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universa
 <div id="wrapper">
 
     <!-- Sidebar -->
-    <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/bar/bsidebar.php") ?>
+    <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/bar/bsidebar.php") ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -22,7 +21,7 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universa
         <div id="content">
 
             <!-- Topbar -->
-            <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/bar/bartop.php") ?>
+            <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/bar/bartop.php") ?>
             <!-- End of Topbar -->
 
             <!-- Begin Page Content -->
@@ -98,7 +97,7 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universa
         <!-- End of Main Content -->
 
         <!-- Footer -->
-        <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/bar/barfooter.php") ?>
+        <?php require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/bar/barfooter.php") ?>
         <!-- End of Footer -->
 
     </div>
@@ -107,7 +106,7 @@ require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universa
 </div>
 <!-- End of Page Wrapper -->
 
-<?php require_once ($_SERVER["DOCUMENT_ROOT"]."/".$GLOBALS["APP_NAME"]."/view/universal/script/scripteof.php") ?>
+<?php require_once ($_SERVER["DOCUMENT_ROOT"]."/app_iacc/view/universal/script/scripteof.php") ?>
 
 </body>
 
