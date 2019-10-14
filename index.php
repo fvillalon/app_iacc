@@ -54,7 +54,7 @@
                   </form>
                   <hr>
                   <div class="text-center">
-                      <a class="small" href="view/forgot-password.html">Olvido su clave &#63;</a>
+                      <a class="small" href="view/forgot-password.html">Olvido su contrase&ntilde;a &#63;</a>
                   </div>
 
                 </div>
