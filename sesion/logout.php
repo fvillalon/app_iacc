@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once ("config.db.php");
+require_once ("../config/config.db.php");
 
 $fecha_bitacora = date("Y-m-d H:i:s");
 $id_bitacora = $_SESSION[$GLOBALS["APP_NAME"] . "_ID_bitacora"];
