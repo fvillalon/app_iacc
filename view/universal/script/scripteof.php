@@ -17,7 +17,7 @@
             <div class="modal-body">Esta accion terminara su sesion actual.</div>
             <div class="modal-footer">
                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                <a class="btn btn-primary" href="../../../sesion/logout.php">Salir</a>
+                <a class="btn btn-primary" href="/app_iacc/sesion/logout.php">Salir</a>
             </div>
         </div>
     </div>
